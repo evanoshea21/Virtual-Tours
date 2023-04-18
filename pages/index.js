@@ -16,7 +16,7 @@ export default function Home() {
 
     <div className={classes.matterportDemo} >
         <iframe className={classes.iframe}
-        allowFullScreen
+        allowFullScreen={false}
         onLoad={() => setDemoLoaded(true)}
         src="https://matterport.com/discover/space/ibE9yBsaRnS"
         allow="xr-spatial-tracking">
