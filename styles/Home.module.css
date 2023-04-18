@@ -1,11 +1,11 @@
 .navBox {
-  background-color: #333;
+  background-color: #212121;
   width: 100vw;
   display: none;
   justify-content: center;
 }
 .smallNavBox {
-  background-color: #333;
+  background-color: #212121;
   width: 100vw;
   display: flex;
   justify-content: center;
