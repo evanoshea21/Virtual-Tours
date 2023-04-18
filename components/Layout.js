@@ -19,17 +19,26 @@ export default function Layout(props) {
   return (
     <div className={classes.main} >
     <Head>
-        <title>Virtual Tour Guy</title>
+        <title>Virtual 3D Tour Guy</title>
         <meta name="description" content="Create Virtual Tours" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
     </Head>
 
     {/* NAVBAR */}
+    <div className={classes.smallNavBox}>
+      <div className={classes.smnavbar}>
+        <h1 onClick={goHome} >Your 360 Guy</h1>
+        <div className={classes.links}>
+          <Link className={classes.link}  href='/pricing'>Pricing</Link>
+          <Link className={classes.link}  href='/contact'>Contact</Link>
+        </div>
+      </div>
+    </div>
     <div className={classes.navBox}>
       <div className={classes.navbar}>
         <Link className={classes.link}  href='/pricing'>Pricing</Link>
-        <h1 onClick={goHome} >Your Tour Guy</h1>
+        <h1 onClick={goHome} >Your 3D Tour Guy</h1>
         <Link className={classes.link}  href='/contact'>Contact</Link>
       </div>
     </div>

@@ -1,14 +1,28 @@
 .navBox {
   background-color: #333;
   width: 100vw;
+  display: none;
+  justify-content: center;
+}
+.smallNavBox {
+  background-color: #333;
+  width: 100vw;
   display: flex;
   justify-content: center;
 }
-.link {
-  font-size: 1.2rem;
+.links {
+  display: flex;
+  justify-content: space-between;
 }
-.main li {
-  margin: 5px;
+
+.smnavbar {
+  /* background-color: #33f; */
+  color: white;
+  padding-bottom: 20px;
+}
+.smnavbar h1 {
+  font-size: 2.6rem;
+  margin: 20px;
 }
 .navbar {
   /* background-color: #33f; */
@@ -18,12 +32,18 @@
   justify-content: space-around;
   align-items: center;
 }
-.navbar h1:hover, .btn:hover {
+.navbar h1:hover, .smnavbar h1:hover, .btn:hover {
   cursor: pointer;
+}
+.link {
+  font-size: 1.2rem;
+}
+.main li {
+  margin: 5px;
 }
 
 .title, .titleBig {
-  margin: 20px;
+  margin: 40px;
   text-align: center;
   font-size: clamp(35px, 10vw, 60px);
 }
@@ -99,7 +119,7 @@
 
 .contactBox  {
   /* background-color: #0778f0; */
-  margin: 30px 0;
+  margin: 60px 0 150px 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -141,5 +161,14 @@
 @media (max-width: 440px) {
   .zillowTitle, .mpTitle, .contactTitle {
     font-size: 30px;
+  }
+}
+
+@media (min-width: 470px) {
+  .navBox {
+    display: flex;
+  }
+  .smallNavBox {
+    display: none;
   }
 }
