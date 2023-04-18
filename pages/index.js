@@ -7,23 +7,20 @@ import { useRouter } from 'next/router'
 
 export default function Home() {
   const router = useRouter();
-  const [demoClass, setdemoClass] = React.useState('');
-
-  function demoLoaded() {
-    setdemoClass('fadeIn');
-  }
+  const [demoLoaded, setDemoLoaded] = React.useState(false);
 
   return (
     <div className={classes.main} >
 
     {/* PUT MATTERPORT HERE -- FULL WIDTH */}
+
     <div className={classes.matterportDemo} >
-      <iframe className={`${classes.iframe} ${demoClass}`}
-      allowFullScreen
-      onLoad={demoLoaded}
-      src="https://matterport.com/discover/space/ibE9yBsaRnS"
-      allow="xr-spatial-tracking">
-      </iframe>
+        <iframe className={classes.iframe}
+        allowFullScreen
+        onLoad={() => setDemoLoaded(true)}
+        src="https://matterport.com/discover/space/ibE9yBsaRnS"
+        allow="xr-spatial-tracking">
+        </iframe>
     </div>
     {/* <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75%;"><iframe src="https://my.matterport.com/show/?m=Srdq49wjRh4" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowFullScreen allow="xr-spatial-tracking;"></iframe></div> */}
 
