@@ -38,7 +38,7 @@ export default function Layout(props) {
     <div className={classes.navBox}>
       <div className={classes.navbar}>
         <Link className={classes.link}  href='/pricing'>Pricing</Link>
-        <h1 onClick={goHome} >Your 3D Tour Guy</h1>
+        <h1 onClick={goHome} >Your 360 Guy</h1>
         <Link className={classes.link}  href='/contact'>Contact</Link>
       </div>
     </div>
