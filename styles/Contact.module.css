@@ -1,0 +1,33 @@
+.title, .para {
+  text-align: center;
+}
+.para {
+  display: flex;
+  justify-content: center;
+}
+.para p {
+  font-size: 2rem;
+  max-width: 600px;
+  padding: 10px;
+  line-height: 1.4;
+}
+.phone, .email {
+  font-size: 1.8rem;
+  text-decoration: underline;
+  color: rgb(0, 102, 255);
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.fadeIn {
+  animation: fadeInAnim .8s ease .2s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnim {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
