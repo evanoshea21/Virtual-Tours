@@ -1,3 +1,6 @@
+.title {
+  margin-top: 50px;
+}
 .title, .para {
   text-align: center;
 }
@@ -6,9 +9,9 @@
   justify-content: center;
 }
 .para p {
-  font-size: 2rem;
+  font-size: 1.4rem;
   max-width: 600px;
-  padding: 10px;
+  /* padding: 10px; */
   line-height: 1.4;
 }
 .phone, .email {
@@ -20,14 +23,69 @@
   justify-content: center;
 }
 
-.fadeIn {
-  animation: fadeInAnim .8s ease .2s;
-  animation-fill-mode: forwards;
+.bookingForm {
+  background-color: rgb(241, 246, 255);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@keyframes fadeInAnim {
-  from {
-    opacity: 0;
-  } to {
-    opacity: 1;
-  }
+.bookingForm > * {
+  max-width: 600px;
+}
+.question {
+  font-family: var(--font2);
+  text-align: center;
+  font-weight: 900;
+  margin: 9px;
+}
+
+.bookbtn {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.callus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+.callus a {
+  font-size: 1.5rem;
+  /* text-decoration: underline; */
+  color: rgb(21, 99, 255);
+}
+
+.formMui > * {
+  margin: 10px;
+}
+
+.afterForm {
+  margin: 40px 0 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.moneybackImg {
+  background-color: aqua;
+  /* padding: 10px; */
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  /* flex-grow: 1; */
+  flex-basis: 150px;
+}
+.refundPara {
+  font-family: var(--font2);
+  padding: 0 10px;
+  color: rgb(63, 63, 63);
+  max-width: 400px;
+  text-align: center;
+  /* flex-grow: 1; */
+  flex-basis: 300px;
 }

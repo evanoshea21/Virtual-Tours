@@ -2,6 +2,8 @@ import classes from '@/styles/Home.module.css'
 import Link from 'next/link'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import Button from '@mui/material/Button';
+
 
 
 export default function Layout(props) {
@@ -30,16 +32,17 @@ export default function Layout(props) {
       <div className={classes.smnavbar}>
         <h1 onClick={goHome} >Your 360 Guy</h1>
         <div className={classes.links}>
-          <Link className={classes.link}  href='/pricing'>Pricing</Link>
+          {/* <Link className={classes.link}  href='/pricing'>BOOK</Link> */}
           <Link className={classes.link}  href='/contact'>Contact</Link>
+          <Button sx={{fontSize: '1rem'}} onClick={() => router.push('/book')}  variant="contained">Book</Button>
         </div>
       </div>
     </div>
     <div className={classes.navBox}>
       <div className={classes.navbar}>
-        <Link className={classes.link}  href='/pricing'>Pricing</Link>
-        <h1 onClick={goHome} >Your 360 Guy</h1>
         <Link className={classes.link}  href='/contact'>Contact</Link>
+        <h1 onClick={goHome} >Your 360 Guy</h1>
+        <Button sx={{fontSize: '1.2rem'}} onClick={() => router.push('/book')}  variant="contained">Book</Button>
       </div>
     </div>
 
