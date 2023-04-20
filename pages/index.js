@@ -44,13 +44,13 @@ export default function Home() {
     </div>
 
 
-    <h3 className={classes.mpTitle}>Matterport</h3>
+    <h3 className={classes.mpTitle}>Matterport Tours</h3>
     <div className={classes.mpBox}>
       <div className={classes.mpImg}>
         <img src='https://api.coarchitects.com/wp-content/uploads/2022/06/HSIB_Matterport_Cover.jpg' width='100%' height='100%'></img>
       </div>
       <div className={classes.mpInfo}>
-        <p className={classes.mpPara} > Matterport has the famous Dollhouse effect with multi-story navigation. <br/><br/>This Flagship Virtual Tour Software can be used embededded on ANY website, such as Realtor.com and Redfin</p>
+        <p className={classes.mpPara} > Matterport has the famous Dollhouse effect with multi-story navigation. <br/><br/>This Flagship Virtual Tour Software can host your tour on any website by posting to the MLS or embedding it on your site.</p>
         {/* <ul>
           <li><span>Buyers are 300% more engaged with 3D Tours than photos alone.</span></li>
           <li><span>55% more Saves</span></li>
