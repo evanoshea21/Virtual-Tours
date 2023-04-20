@@ -3,6 +3,9 @@
 :root {
   --font: 'Roboto', sans-serif;
   --font2: 'Poppins', sans-serif;
+  --primColor: #0778f0;
+  --secColor: #d40d38;
+  --bgColor: #212121;
 }
 
 body, html {

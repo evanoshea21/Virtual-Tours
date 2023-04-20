@@ -50,12 +50,12 @@ export default function Home() {
         <img src='https://api.coarchitects.com/wp-content/uploads/2022/06/HSIB_Matterport_Cover.jpg' width='100%' height='100%'></img>
       </div>
       <div className={classes.mpInfo}>
-        <p></p>
-        <ul>
+        <p className={classes.mpPara} > Matterport has the famous Dollhouse effect and multi-story navigation. <br/><br/>This Flagship Virtual Tour Software can be used embededded on ANY website, such as Realtor.com and Redfin</p>
+        {/* <ul>
           <li><span>Buyers are 300% more engaged with 3D Tours than photos alone.</span></li>
           <li><span>55% more Saves</span></li>
           <li><span>Homes sell 30% Faster</span></li>
-        </ul>
+        </ul> */}
       </div>
     </div>
 

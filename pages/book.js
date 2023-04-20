@@ -25,15 +25,15 @@ export default function Book() {
     if(size.length && service.length) {
       setCallUs(false);
 //TEST
-      if(size === 'small' && service === 'zillow') {
-        setCalendlyURL(baseUrl + '/test');
-      }
+      // if(size === 'small' && service === 'zillow') {
+      //   setCalendlyURL(baseUrl + '/test');
+      // }
 ////////////
 
-      // if(size === 'small' && service === 'zillow') {
-      //   console.log('small zillow');
-      //   setCalendlyURL(baseUrl + '/zillow');
-      // }
+      if(size === 'small' && service === 'zillow') {
+        console.log('small zillow');
+        setCalendlyURL(baseUrl + '/zillow');
+      }
       else if(size === 'small' && service === 'matterport') {
         console.log('small MP');
         setCalendlyURL(baseUrl + '/matterport');
@@ -129,7 +129,7 @@ export default function Book() {
     </div>
 
     <div className={classes.afterForm}>
-      <p className={classes.refundPara} >We offer a 100% refund if you are not entirely satisfied with your service.</p>
+      <p className={classes.refundPara} >We offer a 100% refund if you are not entirely satisfied with the service.</p>
       <div className={classes.moneybackImg}>
         <img src='https://i0.wp.com/problogger.com/wp-content/uploads/2011/02/wp-content_uploads_34_gold_guarantee.jpg?fit=300%2C300&ssl=1' width='100%' height='100%'></img>
       </div>
