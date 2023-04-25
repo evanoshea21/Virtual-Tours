@@ -25,8 +25,10 @@ export default function Home() {
     {/* <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75%;"><iframe src="https://my.matterport.com/show/?m=Srdq49wjRh4" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowFullScreen allow="xr-spatial-tracking;"></iframe></div> */}
 
     {/* PAGE BODY */}
-    <h2 className={classes.title} >Engage more,<br/>Sell Quicker<br/>with 3D Virtual Tours</h2>
-    <h2 className={classes.titleBig} >Engage more, Sell Quicker<br/>with 3D Virtual Tours</h2>
+    <h2 className={classes.title} >Sell your Property FASTER with 360° Virtual Tours</h2>
+    <h2 className={classes.titleBig} >Sell your Property FASTER<br/>with 360° Virtual Tours</h2>
+    {/* <h2 className={classes.title} >Engage more,<br/>Sell Quicker<br/>with 3D Virtual Tours</h2>
+    <h2 className={classes.titleBig} >Engage more, Sell Quicker<br/>with 3D Virtual Tours</h2> */}
 
     <h3 className={classes.zillowTitle}>Zillow 3D Home</h3>
     <div className={classes.zillowBox}>
