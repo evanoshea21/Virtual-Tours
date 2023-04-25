@@ -44,7 +44,7 @@
 }
 
 .title, .titleBig {
-  margin: 40px;
+  margin: 40px 30px;
   text-align: center;
   font-size: clamp(35px, 10vw, 60px);
 }
@@ -169,6 +169,9 @@
 @media (max-width: 440px) {
   .zillowTitle, .mpTitle, .contactTitle {
     font-size: 30px;
+  }
+  .title {
+    margin: 40px 10px;
   }
 }
 
