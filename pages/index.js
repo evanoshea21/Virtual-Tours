@@ -63,6 +63,7 @@ export default function Home() {
 
     <div className={classes.contactBox}>
       <h3 className={classes.contactTitle}>Let's get in Touch</h3>
+      <h4 className={classes.subTitle} >FAQ on Contact Page!</h4>
       <button onClick={() => router.push('/contact')}  className={classes.btn} >Contact</button>
     </div>
 
