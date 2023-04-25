@@ -13,6 +13,7 @@ import { useRouter } from 'next/router';
 export default function Book() {
   const [size, setSize] = React.useState('');
   const [service, setService] = React.useState('');
+  const [payment, setPayment] = React.useState('');
   const [disabled, setDisabled] = React.useState(true);
   const [callUs, setCallUs] = React.useState(false);
   const [calendlyURL, setCalendlyURL] = React.useState('https://calendly.com/your360guy');
@@ -22,41 +23,51 @@ export default function Book() {
 
 
   React.useEffect(() => {
-    if(size.length && service.length) {
+    if(size.length && service.length && payment.length) {
       setCallUs(false);
+      console.log('size, service, payment:\n', size, service, payment);
 //TEST
       // if(size === 'small' && service === 'zillow') {
       //   setCalendlyURL(baseUrl + '/test');
       // }
 ////////////
 
-      if(size === 'small' && service === 'zillow') {
-        console.log('small zillow');
+      if(size === 'small' && service === 'zillow' && payment === 'paypal') {
         setCalendlyURL(baseUrl + '/zillow');
       }
-      else if(size === 'small' && service === 'matterport') {
-        console.log('small MP');
-        setCalendlyURL(baseUrl + '/matterport');
-
+      else if(size === 'small' && service === 'zillow' && payment === 'stripe') {
+        setCalendlyURL(baseUrl + '/zillow-stripe');
       }
-      else if(size === 'small' && service === 'both') {
-        console.log('small BOTH');
+      else if(size === 'small' && service === 'matterport' && payment === 'paypal') {
+        setCalendlyURL(baseUrl + '/matterport');
+      }
+      else if(size === 'small' && service === 'matterport' && payment === 'stripe') {
+        setCalendlyURL(baseUrl + '/matterport-stripe');
+      }
+      else if(size === 'small' && service === 'both' && payment === 'paypal') {
         setCalendlyURL(baseUrl + '/pro-package');
-
+      }
+      else if(size === 'small' && service === 'both' && payment === 'stripe') {
+        setCalendlyURL(baseUrl + '/pro-package-stripe');
       }
       //for large homes
-      else if(size === 'large' && service === 'zillow') {
-        console.log('large zillow');
+      else if(size === 'large' && service === 'zillow' && payment === 'paypal') {
         setCalendlyURL(baseUrl + '/zillow-large');
       }
-      else if(size === 'large' && service === 'matterport') {
-        console.log('large MP');
+      else if(size === 'large' && service === 'zillow' && payment === 'stripe') {
+        setCalendlyURL(baseUrl + '/zillow-large-stripe');
+      }
+      else if(size === 'large' && service === 'matterport' && payment === 'paypal') {
         setCalendlyURL(baseUrl + '/matterport-large');
       }
-      else if(size === 'large' && service === 'both') {
-        console.log('large BOTH');
+      else if(size === 'large' && service === 'matterport' && payment === 'stripe') {
+        setCalendlyURL(baseUrl + '/matterport-large-stripe');
+      }
+      else if(size === 'large' && service === 'both' && payment === 'paypal') {
         setCalendlyURL(baseUrl + '/pro-package-large-home');
-
+      }
+      else if(size === 'large' && service === 'both' && payment === 'stripe') {
+        setCalendlyURL(baseUrl + '/pro-package-large-home-stripe');
       }
       //custom homes
       else {
@@ -64,16 +75,20 @@ export default function Book() {
         setCallUs(true);
       }
 
+
       setDisabled(false);
 
     }
-  },[size, service]);
+  },[size, service, payment]);
 
   const changeService = (event) => {
     setService(event.target.value);
   };
   const changeSize = (event) => {
     setSize(event.target.value);
+  };
+  const changePayment = (event) => {
+    setPayment(event.target.value);
   };
 
   return (
@@ -113,6 +128,20 @@ export default function Book() {
             <MenuItem value={'small'}>0-2500 sqft</MenuItem>
             <MenuItem value={'large'}>2501-4000 sqft</MenuItem>
             <MenuItem value={'custom'}>4001+ (must call for quote)</MenuItem>
+          </Select>
+        </FormControl>
+        <div className={classes.question}>How will you be paying today?</div>
+        <FormControl className={classes.formMui}  sx={{width: '100%'}}>
+          <InputLabel id="demo-payment-type">Payment</InputLabel>
+          <Select
+            labelId="demo-payment-type"
+            id="demo-payment"
+            value={payment}
+            label="Payment"
+            onChange={changePayment}
+            >
+            <MenuItem value={'stripe'}>Debit / Credit</MenuItem>
+            <MenuItem value={'paypal'}>Paypal</MenuItem>
           </Select>
         </FormControl>
         {callUs ? (
