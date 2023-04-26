@@ -41,7 +41,7 @@ export default function Contact() {
       <div style={{fontSize: '1.4rem'}} className={classes.question}>
         <p >Pricing?</p>
       </div>
-        <p>Our starter package is for a Zillow 3D home tour, which starts at $289.</p>
+        <p>Our starter package is for a Zillow 3D home tour, which starts at $249.</p>
         <p>Prices depend on service and property size.</p>
         <p>Pricing per service is indicated during the booking process.</p>
 
