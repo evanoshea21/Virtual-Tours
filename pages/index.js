@@ -28,7 +28,7 @@ export default function Home() {
     <h2 className={classes.titleBig} >Sell your Property EASIER<br/>with 360° Virtual Tours</h2>
     {/* <h2 className={classes.title} >Engage more,<br/>Sell Quicker<br/>with 3D Virtual Tours</h2>
     <h2 className={classes.titleBig} >Engage more, Sell Quicker<br/>with 3D Virtual Tours</h2> */}
-    <p className={classes.introPara} ><span>Listings grab more attention when they introduce new perspectives.</span> Viewing the entire interior with a Virtual Tour, or seeing the perimeter and layout of the property from above can be <span>enough to make you fall in love</span> with the home and reach out to an agent.<br/><br/> <span className={classes.redText} >Aerial photos and Virtual Tours</span> can help you <span>achieve these perspectives.</span></p>
+    <p className={classes.introPara} ><span>Listings grab more attention when they introduce new perspectives.</span> Viewing the entire interior with a Virtual Tour, or seeing the perimeter and layout of the property from above can be <span>enough to make you fall in love</span> with the home and reach out to an agent.<br/><br/> <span className={classes.redText} >Virtual Tours and Aerial photos</span> can help you <span className={classes.redText} >achieve these perspectives.</span></p>
     <h3 className={classes.header}>Our Services</h3>
 
     <h3 className={classes.zillowTitle}>Zillow 3D Home</h3>
