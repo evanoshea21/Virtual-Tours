@@ -61,7 +61,7 @@ export default function Home() {
     <div className={classes.mpBox}>
 
       <div className={classes.mpInfo}>
-        <p className={classes.mpPara}>Aerial photos can help you capture the size and layout of the entire property.<br/><br/>Wow clients with this new perspective from the sky.</p>
+        <p className={`${classes.mpPara} ${classes.aerPara}`}>Aerial photos can help you capture the size and layout of the entire property.<br/><br/>Wow clients with this new perspective from the sky.</p>
         <div className={classes.licensed}>
           <img src='https://previews.123rf.com/images/arcady31/arcady311404/arcady31140400022/27448890-licensed-stamp.jpg'></img>
           Part 107 Licensed Drone Pilot

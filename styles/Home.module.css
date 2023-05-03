@@ -206,6 +206,9 @@
   .licensed {
     transform: translateY(-40px);
   }
+  .aerPara {
+    transform: translateY(-30px);
+  }
 }
 @media (min-width: 820px) {
   .title {
