@@ -42,7 +42,7 @@ export default function Contact() {
         <p >Pricing?</p>
       </div>
         <p>Our prices start at $149 for a Zillow 3D Home. </p>
-        <p>If 4 homes are booked in a 1-week period, special discounts are made, with the Zillow 3D home being offered for only $99! </p>
+        <p>If 4 homes are booked in a 1-week period, special discounts are made, with the Zillow 3D home being offered for only $129! </p>
         {/* <p>Prices depend on service and property size.</p> */}
         <p>Pricing per service is indicated during the booking process.</p>
 

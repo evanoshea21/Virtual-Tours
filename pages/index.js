@@ -24,17 +24,72 @@ export default function Home() {
     </div>
 
     {/* PAGE BODY */}
-    <h2 className={classes.title} >Sell your Property EASIER with 360° Virtual Tours</h2>
-    <h2 className={classes.titleBig} >Sell your Property EASIER<br/>with 360° Virtual Tours</h2>
-    {/* <h2 className={classes.title} >Engage more,<br/>Sell Quicker<br/>with 3D Virtual Tours</h2>
-    <h2 className={classes.titleBig} >Engage more, Sell Quicker<br/>with 3D Virtual Tours</h2> */}
-    <p className={classes.introPara} ><span>Listings grab more attention when they introduce new perspectives.</span> Viewing the entire interior with a Virtual Tour, or seeing the perimeter and layout of the property from above can be <span>enough to make you fall in love</span> with the home and reach out to an agent.<br/><br/> <span className={classes.redText} >Virtual Tours and Aerial photos</span> can help you <span className={classes.redText} >achieve these perspectives.</span></p>
+    <h2 className={classes.titleSm} >Professional<br/>Virtual Tours & Aerial Photos at Affordable prices</h2>
+    <h2 className={classes.title} >Professional Virtual Tours<br/>and Aerial Photos at<br/>Affordable prices</h2>
+
+    <p className={classes.introPara} >Statistics have shown, time and again, that customers are converted at a higher rate on listings that present a 360 Virtual Tour.</p>
+    <p className={classes.introPara}>A home is easier to fall in love with when new and engaging perspectives are available for customers to peruse the property at their own pace.</p>
+
+    <h3 className={`${classes.header} ${classes.whyUs}`}>Why choose us?</h3>
+
+    <div className={classes.threeCol}>
+      <div className={classes.col1}>
+        <div className={classes.iconBox}></div>
+        <h2>Affordable</h2>
+        <p>We are able to keep our pricing low by..</p>
+        <ul>
+          <li>
+          <p>Streamlining the booking/scheduling process</p>
+          </li>
+          <li>
+            <p>Offering deals for our loyal, high-volume clients</p>
+          </li>
+        </ul>
+        <div className={classes.colBtn}>Learn More</div>
+      </div>
+      <div className={classes.col2}>
+      <div className={classes.iconBox}></div>
+        <h2>Professional</h2>
+        <ul>
+          <li>
+            <p>24-hour turnaround time, guarenteed</p>
+          </li>
+          <li>
+            <p>Professional photographing equipment</p>
+          </li>
+          <li>
+            <p>Industry leading Virtual Tour Software—Matterport</p>
+          </li>
+        </ul>
+        <div className={classes.colBtn}>Learn More</div>
+      </div>
+      <div className={classes.col3}>
+      <div className={classes.iconBox}></div>
+        <h2>Effective</h2>
+        <p>Listings that show informative perspectives are convert buyers</p>
+        <ul>
+          <li>
+            <p>Google reports that Virtual Tours doubled the interest in property listings</p>
+          </li>
+          <li>
+            <p>For 18-34yo, virtual tours increased the likelihood of a sale by 130%</p>
+          </li>
+        </ul>
+        <div className={classes.colBtn}>Learn More</div>
+      </div>
+    </div>
+
+
+
+
+
+
     <h3 className={classes.header}>Our Services</h3>
 
     <h3 className={classes.zillowTitle}>Zillow 3D Home</h3>
     <div className={classes.zillowBox}>
       <div className={classes.zillowInfo}>
-        <p>For listings with Zillow 3D Virtual Tours...</p>
+        <p>Zillow reports that listings with their<br/>3d Home Tour receive:</p>
         <ul>
           <li><span>43% more Views</span></li>
           <li><span>55% more Saves</span></li>
