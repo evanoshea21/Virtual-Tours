@@ -7,96 +7,46 @@ import Select from '@mui/material/Select';
 import React from 'react'
 import Button from '@mui/material/Button';
 import { useRouter } from 'next/router';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 
 
 export default function Book() {
-  const [size, setSize] = React.useState('');
-  const [service, setService] = React.useState('');
-  const [payment, setPayment] = React.useState('');
   const [disabled, setDisabled] = React.useState(true);
-  const [callUs, setCallUs] = React.useState(false);
+  const [service, setService] = React.useState('');
+  const [checked, setChecked] = React.useState('off');
   const [calendlyURL, setCalendlyURL] = React.useState('https://calendly.com/your360guy');
   const baseUrl = 'https://calendly.com/your360guy';
 
   const router = useRouter();
 
-
-  React.useEffect(() => {
-    if(size.length && service.length && payment.length) {
-      setCallUs(false);
-      console.log('size, service, payment:\n', size, service, payment);
-//TEST
-      // if(size === 'small' && service === 'zillow') {
-      //   setCalendlyURL(baseUrl + '/test');
-      // }
-////////////
-
-      if(size === 'small' && service === 'zillow' && payment === 'paypal') {
-        setCalendlyURL(baseUrl + '/zillow');
-      }
-      else if(size === 'small' && service === 'zillow' && payment === 'stripe') {
-        setCalendlyURL(baseUrl + '/zillow-stripe');
-      }
-      else if(size === 'small' && service === 'matterport' && payment === 'paypal') {
-        setCalendlyURL(baseUrl + '/matterport');
-      }
-      else if(size === 'small' && service === 'matterport' && payment === 'stripe') {
-        setCalendlyURL(baseUrl + '/matterport-stripe');
-      }
-      else if(size === 'small' && service === 'both' && payment === 'paypal') {
-        setCalendlyURL(baseUrl + '/pro-package');
-      }
-      else if(size === 'small' && service === 'both' && payment === 'stripe') {
-        setCalendlyURL(baseUrl + '/pro-package-stripe');
-      }
-      //for large homes
-      else if(size === 'large' && service === 'zillow' && payment === 'paypal') {
-        setCalendlyURL(baseUrl + '/zillow-large');
-      }
-      else if(size === 'large' && service === 'zillow' && payment === 'stripe') {
-        setCalendlyURL(baseUrl + '/zillow-large-stripe');
-      }
-      else if(size === 'large' && service === 'matterport' && payment === 'paypal') {
-        setCalendlyURL(baseUrl + '/matterport-large');
-      }
-      else if(size === 'large' && service === 'matterport' && payment === 'stripe') {
-        setCalendlyURL(baseUrl + '/matterport-large-stripe');
-      }
-      else if(size === 'large' && service === 'both' && payment === 'paypal') {
-        setCalendlyURL(baseUrl + '/pro-package-large-home');
-      }
-      else if(size === 'large' && service === 'both' && payment === 'stripe') {
-        setCalendlyURL(baseUrl + '/pro-package-large-home-stripe');
-      }
-      //custom homes
-      else {
-        console.log('custom homes');
-        setCallUs(true);
-      }
-
-
-      setDisabled(false);
-
-    }
-  },[size, service, payment]);
-
   const changeService = (event) => {
-    setService(event.target.value);
+    let val = event.target.value;
+    setService(val)
+    setDisabled(false);
+    setCalendlyURL(baseUrl + '/' + val);
   };
-  const changeSize = (event) => {
-    setSize(event.target.value);
+
+  const acceptTerms = (event) => {
+    let val = event.target.checked;
+    console.log('terms: ', val);
+    setChecked(val)
   };
-  const changePayment = (event) => {
-    setPayment(event.target.value);
-  };
+
+  // const changeSize = (event) => {
+  //   setSize(event.target.value);
+  // };
+  // const changePayment = (event) => {
+  //   setPayment(event.target.value);
+  // };
 
   return (
     <>
     <>
     <h1 className={classes.title} >Book a Time</h1>
     <div className={classes.para}>
-      <p >Let us know if you have any questions before booking.</p>
+      <p ><a className={classes.aTag}  href='/contact'>Let us know</a> if you have any questions before booking!</p>
     </div>
     <div className={classes.bookingForm} >
       <div className={classes.inputs}>
@@ -112,10 +62,18 @@ export default function Book() {
           >
             <MenuItem value={'zillow'}>Zillow 3D Home</MenuItem>
             <MenuItem value={'matterport'}>Matterport Pro</MenuItem>
-            <MenuItem value={'both'}>Package (Matterport + Zillow)</MenuItem>
+            <MenuItem value={'aerial'}>Aerial Photos (standalone)</MenuItem>
+            <MenuItem value={'zillow-aerial'}>Zillow & Aerial Photos (package)</MenuItem>
+            <MenuItem value={'mp-aerial'}>Matteport & Aerial Photos (package)</MenuItem>
           </Select>
         </FormControl>
-        <div className={classes.question}>What is the Size of the Property?</div>
+        <div style={{maxWidth: '350px', fontWeight: '200', color: 'rgb(100,100,100)'}} className={classes.question}>Note: there is a $50 deposit due at time of booking. This will be subtracted from the price at the time of fulfillment.</div>
+        {/* <FormControlLabel sx={{ml: '2px'}} control={
+        <Checkbox
+        checked={checked}
+        onChange={acceptTerms}
+        />} label="I understand that a $50 deposit will be made at the time of booking. This will be subtracted from the price of the service when order is fulfilled." /> */}
+        {/* <div className={classes.question}>What is the Size of the Property?</div>
         <FormControl className={classes.formMui}  sx={{width: '100%'}}>
           <InputLabel id="demo-house-size">Property Size</InputLabel>
           <Select
@@ -143,17 +101,18 @@ export default function Book() {
             <MenuItem value={'stripe'}>Debit / Credit</MenuItem>
             <MenuItem value={'paypal'}>Paypal</MenuItem>
           </Select>
-        </FormControl>
-        {callUs ? (
+        </FormControl> */}
+
+        {/* {callUs ? (
           <div style={{margin: 0}} className={classes.callus}>
             <h2>Call Us</h2>
             <a href='tel:9168051852'>(916) 805-1852</a>
           </div>
-        ) : (
+        ) : ( */}
         <div className={classes.bookbtn}>
         <Button disabled={disabled} sx={{py: '10px', width: '95%', fontSize: '1rem'}} onClick={() => router.push(calendlyURL)}  variant="contained">Book a Time</Button>
         </div>
-        )}
+        {/* )} */}
       </div>
     </div>
 
