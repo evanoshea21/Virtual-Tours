@@ -129,7 +129,6 @@
 }
 
 .table td, .table th {
-  /* border: 1px solid #ddd; */
   padding: 20px 12px;
 }
 .table {
@@ -147,6 +146,5 @@
 .table tr:hover {background-color: #ddd;}
 
 .desc {
-  /* background-color: red; */
   max-width: 500px;
 }

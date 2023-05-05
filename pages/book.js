@@ -126,11 +126,15 @@ export default function Book() {
 
     <div className={classes.pricing}>
       <table className={classes.table} >
+        <thead>
+
         <tr>
           <th>Service</th>
           <th>Details</th>
           <th>Pricing</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
           <td>Zillow 3D home</td>
           <td className={classes.desc}>A virtual tour for your Zillow listing. Boost engagement and recieve the "3D Home" badge on your listing to grab attention.</td>
@@ -138,7 +142,9 @@ export default function Book() {
         </tr>
         <tr>
           <td>Matterport PRO</td>
-          <td className={classes.desc}>Our flagship Virtual Tour service. This Virtual Tour includes the famous Dollhouse perspective, multi-story navigation, and descriptions you can add to highlight features in the home. <br/><br/><span style={{color: 'grey'}}>Did you know: Matterport Tours get uploaded to Zillow too!</span></td>
+          <td className={classes.desc}>Our flagship Virtual Tour service. This Virtual Tour includes the famous Dollhouse perspective, multi-story navigation, and descriptions you can add to highlight features in the home.
+          <br/><br/><span style={{color: 'grey'}}>Did you know: Matterport Tours get uploaded to Zillow too!</span>
+          </td>
           <td>249</td>
         </tr>
         <tr>
@@ -149,13 +155,19 @@ export default function Book() {
         <tr>
           <td>Zillow + Aerial Photos</td>
           <td className={classes.desc}>Capture all perspectives with a Virtual Tour and Drone Pictures. Discounted Prices apply for this bundle.</td>
-          <td>390 <br/><span style={{color: 'green'}}>$49 Savings</span></td>
+          <td>390
+            <br/><span style={{color: 'green'}}>$49 Savings</span>
+            </td>
         </tr>
         <tr>
           <td>Matterport + Aerial Photos</td>
           <td className={classes.desc}>Capture all perspectives with a Virtual Tour and Drone Pictures. Discounted Prices apply for this bundle.</td>
-          <td>435 <br/><span style={{color: 'green'}}>$94 savings</span></td>
+          <td>435
+            <br/>
+          <span style={{color: 'green'}}>$94 savings</span>
+          </td>
         </tr>
+        </tbody>
       </table>
     </div>
 
