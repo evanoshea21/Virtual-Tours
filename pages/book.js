@@ -132,40 +132,46 @@ export default function Book() {
           <th>Service</th>
           <th>Details</th>
           <th>Pricing</th>
+          <th>Bundle Price<br/><span style={{color: 'rgb(220,220,220)', fontWeight: '400', fontSize: '.95rem'}}>(4+ bookings<br/>in a week)</span></th>
         </tr>
         </thead>
         <tbody>
         <tr>
           <td>Zillow 3D home</td>
           <td className={classes.desc}>A virtual tour for your Zillow listing. Boost engagement and recieve the "3D Home" badge on your listing to grab attention.</td>
-          <td>159</td>
+          <td>$150</td>
+          <td>$99</td>
         </tr>
         <tr>
           <td>Matterport PRO</td>
           <td className={classes.desc}>Our flagship Virtual Tour service. This Virtual Tour includes the famous Dollhouse perspective, multi-story navigation, and descriptions you can add to highlight features in the home.
           <br/><br/><span style={{color: 'grey'}}>Did you know: Matterport Tours get uploaded to Zillow too!</span>
           </td>
-          <td>249</td>
+          <td>$190</td>
+          <td>$150</td>
         </tr>
         <tr>
           <td>Aerial Photos</td>
           <td className={classes.desc} >5 professionally shot and edited photos. We are certified drone pilots, with a license from the FAA.</td>
-          <td>280</td>
+          <td>$250</td>
+          <td>$180</td>
         </tr>
         <tr>
           <td>Zillow + Aerial Photos</td>
-          <td className={classes.desc}>Capture all perspectives with a Virtual Tour and Drone Pictures. Discounted Prices apply for this bundle.</td>
-          <td>390
-            <br/><span style={{color: 'green'}}>$49 Savings</span>
+          <td className={classes.desc}>Capture all perspectives with a Virtual Tour and Drone Pictures.<br/>Bundle and save.</td>
+          <td>340
+            <br/><span style={{color: 'green'}}>$60 savings</span>
             </td>
+          <td>$280</td>
         </tr>
         <tr>
           <td>Matterport + Aerial Photos</td>
-          <td className={classes.desc}>Capture all perspectives with a Virtual Tour and Drone Pictures. Discounted Prices apply for this bundle.</td>
-          <td>435
+          <td className={classes.desc}>Capture all perspectives with a Virtual Tour and Drone Pictures.<br/>Bundle and save.</td>
+          <td>$360
             <br/>
-          <span style={{color: 'green'}}>$94 savings</span>
+          <span style={{color: 'green'}}>$80 savings</span>
           </td>
+          <td>$299</td>
         </tr>
         </tbody>
       </table>
