@@ -108,3 +108,45 @@
   /* flex-grow: 1; */
   flex-basis: 300px;
 }
+
+/* TABLE */
+.pricing {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 485px) {
+  .pricing {
+    display: block;
+  }
+}
+
+.table {
+  margin: 8px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table td, .table th {
+  /* border: 1px solid #ddd; */
+  padding: 20px 12px;
+}
+.table {
+  min-width: 460px;
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--primColor);
+  color: white;
+}
+
+.table tr:hover {background-color: #ddd;}
+
+.desc {
+  /* background-color: red; */
+  max-width: 500px;
+}

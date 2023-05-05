@@ -48,6 +48,8 @@ export default function Book() {
     <div className={classes.para}>
       <p ><a className={classes.aTag}  href='/contact'>Let us know</a> if you have any questions before booking!</p>
     </div>
+
+
     <div className={classes.bookingForm} >
       <div className={classes.inputs}>
         <div className={classes.question}>What type of service are you looking for?</div>
@@ -68,6 +70,10 @@ export default function Book() {
           </Select>
         </FormControl>
         <div style={{maxWidth: '350px', fontWeight: '200', color: 'rgb(100,100,100)'}} className={classes.question}>Note: there is a $50 deposit due at time of booking. This will be subtracted from the price at the time of fulfillment.</div>
+
+
+
+
         {/* <FormControlLabel sx={{ml: '2px'}} control={
         <Checkbox
         checked={checked}
@@ -114,6 +120,43 @@ export default function Book() {
         </div>
         {/* )} */}
       </div>
+    </div>
+
+    <h2 className={classes.title} >Services and Pricing</h2>
+
+    <div className={classes.pricing}>
+      <table className={classes.table} >
+        <tr>
+          <th>Service</th>
+          <th>Details</th>
+          <th>Pricing</th>
+        </tr>
+        <tr>
+          <td>Zillow 3D home</td>
+          <td className={classes.desc}>A virtual tour for your Zillow listing. Boost engagement and recieve the "3D Home" badge on your listing to grab attention.</td>
+          <td>159</td>
+        </tr>
+        <tr>
+          <td>Matterport PRO</td>
+          <td className={classes.desc}>Our flagship Virtual Tour service. This Virtual Tour includes the famous Dollhouse perspective, multi-story navigation, and descriptions you can add to highlight features in the home. <br/><br/><span style={{color: 'grey'}}>Did you know: Matterport Tours get uploaded to Zillow too!</span></td>
+          <td>249</td>
+        </tr>
+        <tr>
+          <td>Aerial Photos</td>
+          <td className={classes.desc} >5 professionally shot and edited photos. We are certified drone pilots, with a license from the FAA.</td>
+          <td>280</td>
+        </tr>
+        <tr>
+          <td>Zillow + Aerial Photos</td>
+          <td className={classes.desc}>Capture all perspectives with a Virtual Tour and Drone Pictures. Discounted Prices apply for this bundle.</td>
+          <td>390 <br/><span style={{color: 'green'}}>$49 Savings</span></td>
+        </tr>
+        <tr>
+          <td>Matterport + Aerial Photos</td>
+          <td className={classes.desc}>Capture all perspectives with a Virtual Tour and Drone Pictures. Discounted Prices apply for this bundle.</td>
+          <td>435 <br/><span style={{color: 'green'}}>$94 savings</span></td>
+        </tr>
+      </table>
     </div>
 
     <div className={classes.afterForm}>
