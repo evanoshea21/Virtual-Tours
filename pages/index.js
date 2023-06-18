@@ -30,6 +30,10 @@ export default function Home() {
     <p className={classes.introPara} >Statistics have shown, time and again, that customers are converted at a higher rate on listings that present a 360 Virtual Tour.</p>
     <p className={classes.introPara}>A home is easier to fall in love with when new and engaging perspectives are available for customers to peruse the property at their own pace.</p>
 
+    <div className={classes.imgBox1}>
+      <img src='/testimonial.jpg' alt='photo'/>
+    </div>
+
     <h3 className={`${classes.header} ${classes.whyUs}`}>Why choose us?</h3>
 
     <div className={classes.threeCol}>
