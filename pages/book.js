@@ -69,7 +69,7 @@ export default function Book() {
             <MenuItem value={'mp-aerial'}>Matteport & Aerial Photos (package)</MenuItem>
           </Select>
         </FormControl>
-        <div style={{maxWidth: '350px', fontWeight: '200', color: 'rgb(100,100,100)'}} className={classes.question}>Note: there is a $50 deposit due at time of booking. This will be subtracted from the price at the time of fulfillment.</div>
+        {/* <div style={{maxWidth: '350px', fontWeight: '200', color: 'rgb(100,100,100)'}} className={classes.question}>Note: there is a $50 deposit due at time of booking. This will be subtracted from the price at the time of fulfillment.</div> */}
 
 
 
